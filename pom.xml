@@ -12,15 +12,21 @@
 	<artifactId>movieSpring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>movieSpring</name>
-	<description>movie spring project</description>
+	<description>movieSpring project</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>15</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
