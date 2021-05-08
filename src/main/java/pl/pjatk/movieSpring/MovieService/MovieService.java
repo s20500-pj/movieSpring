@@ -1,12 +1,10 @@
 package pl.pjatk.movieSpring.MovieService;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import pl.pjatk.movieSpring.model.Category;
 import pl.pjatk.movieSpring.model.Movie;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class MovieService {
@@ -20,7 +18,7 @@ public class MovieService {
     }
 
 
-    public Movie getMovieById(int movieId) {
+    public Movie getMovieById(Long movieId) {
         Movie movie1 = new Movie("Killer", Category.COMEDY);
 
         return movie1;
@@ -32,13 +30,13 @@ public class MovieService {
         return movie1;
     }
 
-    public Movie updateMovieById(int movieId, Movie movie) {
+    public Movie updateMovieById(Long movieId, Movie movie) {
         Movie movie1 = movie;
         System.out.println("Updated movie of id " + movieId);
         return movie1;
     }
 
-    public void deleteMovieById(int movieId) {
+    public void deleteMovieById(Long movieId) {
         System.out.println("Deleted movie of id: " + movieId);
     }
 

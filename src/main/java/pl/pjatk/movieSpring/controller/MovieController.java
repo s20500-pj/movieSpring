@@ -24,24 +24,24 @@ public class MovieController {
 
 
     @GetMapping("/{movieId}")
-    public ResponseEntity<Movie> getMovieById(@PathVariable("movieId") int movieId) {
+    public ResponseEntity<Movie> getMovieById(@PathVariable("movieId") Long movieId) {
         return ResponseEntity.ok(movieService.getMovieById(movieId));
     }
 
-    @PostMapping
+    @PostMapping("/movies")
     public ResponseEntity<Movie> getMovie(@RequestBody Movie movie) {
         Movie movie1 = movieService.getMovieFromBody();
         return ResponseEntity.ok(movie1);
     }
 
-    @PutMapping("/{movieId}")
-    public ResponseEntity<Movie> updateById(@PathVariable("movieId") int movieId, @RequestBody Movie movie) {
+    @PutMapping("/movies/{movieId}")
+    public ResponseEntity<Movie> updateById(@PathVariable("movieId") Long movieId, @RequestBody Movie movie) {
         Movie movie1 = movieService.updateMovieById(movieId, movie);
         return ResponseEntity.ok(movie1);
     }
 
-    @DeleteMapping("/{movieId}")
-    public ResponseEntity<Void> deleteById(@PathVariable("movieId") int movieId) {
+    @DeleteMapping("/movies/{movieId}")
+    public ResponseEntity<Void> deleteById(@PathVariable("movieId") Long movieId) {
         movieService.deleteMovieById(movieId);
         return ResponseEntity.ok().build();
     }
