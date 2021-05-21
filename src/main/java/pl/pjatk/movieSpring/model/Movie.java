@@ -10,17 +10,17 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String naame;
+    private String name;
     private Enum<Category> category;
 
-    public Movie(Long id, String naame, Enum<Category> category) {
+    public Movie(Long id, String name, Enum<Category> category) {
         this.id = id;
-        this.naame = naame;
+        this.name = name;
         this.category = category;
     }
 
-    public Movie(String naame, Enum<Category> category) {
-        this.naame = naame;
+    public Movie(String name, Enum<Category> category) {
+        this.name = name;
         this.category = category;
     }
 
@@ -37,11 +37,11 @@ public class Movie {
     }
 
     public String getNaame() {
-        return naame;
+        return name;
     }
 
     public void setNaame(String naame) {
-        this.naame = naame;
+        this.name = name;
     }
 
     public Enum<Category> getCategory() {
