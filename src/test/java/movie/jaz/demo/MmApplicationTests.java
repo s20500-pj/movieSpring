@@ -1,10 +1,10 @@
-package pl.pjatk.movieSpring;
+package movie.jaz.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MovieSpringApplicationTests {
+class MmApplicationTests {
 
 	@Test
 	void contextLoads() {

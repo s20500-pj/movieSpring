@@ -1,9 +1,5 @@
-package pl.pjatk.movieSpring.model;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package movie.jaz.demo.model;
+import javax.persistence.*;
 
 @Entity
 public class Movie {
@@ -11,15 +7,16 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Enum<Category> category;
+    @Enumerated(EnumType.STRING)
+    private Category category;
 
-    public Movie(Long id, String name, Enum<Category> category) {
+    public Movie(Long id, String name, Category category) {
         this.id = id;
         this.name = name;
         this.category = category;
     }
 
-    public Movie(String name, Enum<Category> category) {
+    public Movie(String name, Category category) {
         this.name = name;
         this.category = category;
     }
@@ -48,7 +45,7 @@ public class Movie {
         return category;
     }
 
-    public void setCategory(Enum<Category> category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 }

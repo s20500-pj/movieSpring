@@ -1,5 +1,4 @@
-package pl.pjatk.movieSpring.model;
-
+package movie.jaz.demo.model;
 public enum Category {
     ACTION,
     COMEDY,
