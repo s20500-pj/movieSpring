@@ -9,6 +9,14 @@ public class Movie {
     private String name;
     @Enumerated(EnumType.STRING)
     private Category category;
+    private boolean isavailable;
+
+    public Movie(Long id, String name, Category category, boolean isavailable) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.isavailable = isavailable;
+    }
 
     public Movie(Long id, String name, Category category) {
         this.id = id;
@@ -47,5 +55,21 @@ public class Movie {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isIsavailable() {
+        return isavailable;
+    }
+
+    public void setIsavailable(boolean isavailable) {
+        this.isavailable = isavailable;
     }
 }

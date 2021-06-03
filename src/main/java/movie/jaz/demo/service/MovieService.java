@@ -15,11 +15,11 @@ public class MovieService {
         this.movieRepository = movieRepository;
     }
 
-    public Optional<Movie> findById(Long id){
+    public Optional<Movie> findById(Long id) {
         return movieRepository.findById(id);
     }
 
-    public List<Movie> findAll(){
+    public List<Movie> findAll() {
         return movieRepository.findAll();
     }
 
@@ -36,6 +36,9 @@ public class MovieService {
         movieRepository.deleteById(movieId);
     }
 
+    public void changeAvailable(Long movieId){
+        movieRepository.changeAvailable(movieId);
+    }
 
 
 

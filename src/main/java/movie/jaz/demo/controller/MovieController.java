@@ -47,5 +47,11 @@ public class MovieController {
         return ResponseEntity.ok().build();
     }
 
+    @PutMapping("/movies/{movieId}")
+    public ResponseEntity<Void> changeAvailable(@PathVariable("movieId") Long movieId){
+        movieService.changeAvailable(movieId);
+        return ResponseEntity.ok().build();
+    }
+
 
 }
